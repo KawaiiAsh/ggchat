@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:ggchat/views/home/edit_page.dart';
 
 class ProfilePage extends StatelessWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -22,7 +23,12 @@ class ProfilePage extends StatelessWidget {
                 const Text('个人中心', style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold, color: Colors.white)),
                 IconButton(
                   icon: const Icon(Icons.edit, color: Colors.white, size: 28),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const EditPage()),
+                    );
+                  },
                 ),
               ],
             ),
